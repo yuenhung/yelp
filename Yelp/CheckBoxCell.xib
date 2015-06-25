@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CheckBoxCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eom-ui-PUk">
+                        <rect key="frame" x="279" y="6" width="33" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="PXZ-iA-Hf7"/>
+                            <constraint firstAttribute="height" constant="33" id="o8M-pk-ket"/>
+                        </constraints>
+                        <state key="normal" image="uncheck">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="chechBoxAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="adf-bX-8oN"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-Ls-ljI">
+                        <rect key="frame" x="8" y="8" width="42" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eom-ui-PUk" firstAttribute="centerY" secondItem="5bZ-Ls-ljI" secondAttribute="centerY" id="2wS-Rd-P3T"/>
+                    <constraint firstAttribute="trailing" secondItem="eom-ui-PUk" secondAttribute="trailing" constant="8" id="QLX-sU-wSR"/>
+                    <constraint firstItem="5bZ-Ls-ljI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Yba-Jq-35L"/>
+                    <constraint firstAttribute="bottom" secondItem="5bZ-Ls-ljI" secondAttribute="bottom" constant="8" id="oK5-Rw-S76"/>
+                    <constraint firstItem="5bZ-Ls-ljI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vaK-JI-qAJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkBox" destination="eom-ui-PUk" id="bIs-yB-QA5"/>
+                <outlet property="titleLabel" destination="5bZ-Ls-ljI" id="zb5-mY-Lq5"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="uncheck" width="150" height="150"/>
+    </resources>
+</document>
